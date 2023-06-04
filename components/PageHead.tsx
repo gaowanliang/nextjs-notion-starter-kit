@@ -29,8 +29,8 @@ export const PageHead: React.FC<
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
       />
 
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fefffe" key="theme-color-light"/>
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2d3439" key="theme-color-dark"/>
+      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fefffe" key="theme-color-light" />
+      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2d3439" key="theme-color-dark" />
 
       <meta name='robots' content='index,follow' />
       <meta property='og:type' content='website' />
@@ -78,6 +78,14 @@ export const PageHead: React.FC<
         href={rssFeedUrl}
         title={site?.name}
       />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4631GQ6NE"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-C4631GQ6NE');
+      </script>
 
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />
