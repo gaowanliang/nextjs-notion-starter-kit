@@ -78,14 +78,21 @@ export const PageHead: React.FC<
         href={rssFeedUrl}
         title={site?.name}
       />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4631GQ6NE"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=G-C4631GQ6NE`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-C4631GQ6NE');
+          `,
+        }}
+      />
 
-        gtag('config', 'G-C4631GQ6NE');
-      </script>
 
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />
